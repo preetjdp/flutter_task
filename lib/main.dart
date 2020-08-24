@@ -27,7 +27,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _counter = 0;
+  int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return UI(
+    return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'Button count:',
             ),
             Text(
-              '_counter',
+              '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
